@@ -1,9 +1,9 @@
 function average(arrayOfNumber) {
   return 2;
-  return (
+  /*return (
     arrayOfNumber.length != 0 &&
     arrayOfNumber.reduce((cum, element) => cum + element, 0) / times.length
-  );
+  );*/
 }
 
 module.exports = {
