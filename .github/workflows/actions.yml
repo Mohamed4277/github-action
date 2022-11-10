@@ -19,3 +19,5 @@ jobs:
     steps:
      - uses: actions/checkout@v3
      - run: docker build -t 7871417/myrepo:latest .
+     - run: docker login -u 7871417 -p $PASSWORD
+     - run: docker push 7871417/myrepo:latest
