@@ -14,3 +14,8 @@ jobs:
         with:
           name: dist-without-markdown
           path: logs.txt
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v3
+     - run: docker build -t 7871417/myrepo:latest
