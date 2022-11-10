@@ -17,7 +17,13 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v3
-     - run: docker build -t 7871417/myrepo:latest .
-     - run: docker login -u $secrets.USER -p  $secrets.PASSWORD
-     - run: docker push 7871417/myrepo:latest
+      - uses: actions/checkout@v2
+      - name: docker login
+        env:
+          PASSWORD: ${{ secrets.PASSWORD }}
+          USER: ${{ secrets.USER }}
+        run: docker login -u $USER -p $PASSWORD
+      - name: Build the Docker image
+        run: docker build -t 77871417/myrepo .
+      - name: Push the Docker image
+        run: docker push 77871417/devops:latest
