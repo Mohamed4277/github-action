@@ -26,4 +26,4 @@ jobs:
       - name: Build the Docker image
         run: docker build -t 77871417/myrepo .
       - name: Push the Docker image
-        run: docker push 77871417/devops:latest
+        run: docker push 77871417/myrepo:latest
